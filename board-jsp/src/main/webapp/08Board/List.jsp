@@ -40,7 +40,7 @@
 					<select name="searchField">
 						<option value="title">제목</option>
 						<option value="content">내용</option>
-						<option value="id">작성자</option>
+						<option value="name">작성자</option>
 					</select> <!-- 검색필드 설정 -->
 					
 					<input type="text"name="searchWord"/> <!-- 검색단어 -->
@@ -74,8 +74,9 @@
 				%>
 				<tr>
 					<td><%= virtualNum %></td>
-					<td><%= dto.getTitle() %></td>
-					<td><%= dto.getId() %></td>
+					<td align="left">
+					<a href="View.jsp?num=<%= dto.getNum() %>"><%= dto.getTitle() %></a></td>
+					<td><%= dto.getName() %> (<%=dto.getId() %>)</td>
 					<td><%= dto.getVisitcount() %></td>
 					<td><%= dto.getPostdate() %></td>
 				</tr>

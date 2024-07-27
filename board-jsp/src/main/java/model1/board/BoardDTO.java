@@ -11,6 +11,10 @@ public class BoardDTO {
 	private Date postdate;
 	private String visitcount;
 	private String name; // member 테이블에 있는 작성자의 이름
+	
+	
+	
+	
 
 	public BoardDTO() {
 		// 기본 생성자
@@ -71,5 +75,12 @@ public class BoardDTO {
 	public void setName(String name) {
 		this.name = name;
 	};
+	
+	// 객체를 문자열로 변환하여 콘솔에 출력해줌
+		@Override
+		public String toString() {
+			return "BoardDTO [num=" + num + ", title=" + title + ", content=" + content + ", id=" + id + ", postdate="
+					+ postdate + ", visitcount=" + visitcount + ", name=" + name + "]";
+		}
 
 }

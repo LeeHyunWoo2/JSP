@@ -59,3 +59,7 @@ select * from member where id='kkw' and pass='1234';
 -- DAO에서 쿼리문 제대로 쓴건가 확인할때 sql파일에서 테스트하는게 좋다
 
 select count(*) from board where title like '%제목%'
+
+select B.*, M.name from member M inner join board B on M.id = B.id where num=3;
+
+update board set visitcount = visitcount+1 where num=2;
